@@ -22,8 +22,14 @@ const Products = conn.define('products', {
   description: {
     type: DataTypes.TEXT('long')
   },
-  location: {
-    type: DataTypes.TEXT('long'),
+  item: {
+    type: DataTypes.TINYINT,
+    defaultValue: 0,
+    allowNull: false
+  },
+  price: {
+    type: DataTypes.BIGINT,
+    defaultValue: 0.000,
     allowNull: false
   },
   like: {
