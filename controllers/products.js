@@ -29,10 +29,29 @@ exports.postProducts = async (req, res, next) => {
 
     res.status(200).json({
       status: 'success',
-      code: 204,
+      code: 200,
       message: 'successfully added the product'
     })
   
+    return product
+  }
+  catch(err) {
+    console.log(err)
+  }
+}
+
+exports.deleteProducts = async (req, res, next) => {
+  try {
+    const product = await Products.destroy({
+      where: { id: req.params.id }
+    })
+
+    res.status(200).json({
+      status: 'success',
+      code: 200,
+      message: 'successfully deleted the product'
+    })
+
     return product
   }
   catch(err) {
