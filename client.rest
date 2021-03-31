@@ -18,3 +18,16 @@ Content-Type: application/json
 
 DELETE http://localhost:8080/products/1
 Content-Type: application/json
+
+###
+
+PUT http://localhost:8080/products/1
+Content-Type: application/json
+
+{
+  "seller": "bot",
+  "name": "Laptop Macbook Pro 16",
+  "description": "Laptop Macbook Pro 16 Intel Core i7 - SSD",
+  "item": 4,
+  "price": 36000000
+}
