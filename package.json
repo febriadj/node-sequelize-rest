@@ -1,0 +1,35 @@
+{
+  "name": "node-sequelize-rest",
+  "version": "1.0.0",
+  "description": "Rest API nodejs mysql and sequelize",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/febriadj/node-sequelize-rest.git"
+  },
+  "keywords": [
+    "sequelize",
+    "orm",
+    "nodejs",
+    "mysql"
+  ],
+  "author": "febriadji",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/febriadj/node-sequelize-rest/issues"
+  },
+  "homepage": "https://github.com/febriadj/node-sequelize-rest#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "mysql2": "^2.2.5",
+    "sequelize": "^6.6.2"
+  },
+  "devDependencies": {
+    "dotenv": "^8.2.0",
+    "nodemon": "^2.0.7"
+  }
+}
