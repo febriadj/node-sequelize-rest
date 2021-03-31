@@ -33,17 +33,12 @@ const Products = conn.define('products', {
   dislike: {
     type: DataTypes.INTEGER,
     defaultValue: 0
-  },
-  createdAt: {
-    type: DataTypes.DATE,
-    allowNull: false,
-    defaultValue: new Date()
-  },
-  updatedAt: {
-    type: DataTypes.DATE,
-    allowNull: false,
-    defaultValue: new Date()
   }
+}, {
+  tableName: 'products',
+  timestamps: true
 })
+
+conn.sync({ force: true })
 
 module.exports = Products

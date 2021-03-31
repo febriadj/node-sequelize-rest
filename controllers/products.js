@@ -7,11 +7,13 @@ exports.getProducts = async (req, res, next) => {
     const products = await Products.findAll()
 
     if (products.length == 0) {
-      return res.status(204).json({
+      res.status(204).json({
         status: 'success',
         code: 204,
         message: 'product is still empty'
       })
+
+      return false
     }
     
     res.status(200).json(products)

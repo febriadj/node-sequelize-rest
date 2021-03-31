@@ -1,10 +1,11 @@
 'use strict'
 
-const express = require('express')
-const cors = require('cors')
-const dotenv = require('dotenv')
-const app = express()
-const port = process.env.PORT || 8080
+const 
+  express = require('express'),
+  cors = require('cors'),
+  dotenv = require('dotenv'),
+  app = express(),
+  port = process.env.PORT || 8080
 
 // .env file
 dotenv.config({ path: './.env' })
@@ -15,7 +16,7 @@ app.use(cors())
 app.use(express.urlencoded({ extended: false }))
 app.use(express.json())
 
-app.use('/products', require('./routes/products'))
+app.use(require('./routes/products'))
 
 app.listen(port, (err) => {
   err ? console.log(err) : console.log('Server Running on Port:' + port)
