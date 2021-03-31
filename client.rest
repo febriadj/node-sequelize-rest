@@ -5,3 +5,10 @@ Content-Type: application/json
 
 POST http://localhost:8080/products
 Content-Type: application/json
+
+{
+  "seller": "anonymous",
+  "name": "Laptop Asus Vivobook",
+  "description": "Laptop Asus Vivobook",
+  "location": "Jakarta, Indonesia"
+}

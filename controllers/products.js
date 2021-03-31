@@ -22,3 +22,20 @@ exports.getProducts = async (req, res, next) => {
     console.log(err)
   }
 }
+
+exports.postProducts = async (req, res, next) => {
+  try {
+    const product = await Products.create(req.body)
+
+    res.status(200).json({
+      status: 'success',
+      code: 204,
+      message: 'successfully added the product'
+    })
+  
+    return product
+  }
+  catch(err) {
+    console.log(err)
+  }
+}
